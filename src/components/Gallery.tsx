@@ -10,36 +10,50 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
+  fontFamily: '"MaruBuri", serif',
+  color: "#795548",
   fontSize: "2vh",
-  fontWeight: "bold",
-  opacity: 0.85,
+  fontWeight: 600,
+  opacity: 0.95,
   marginBottom: 0,
 });
 
 const images = [
   {
-    original: "./assets/Gallery_Photo_1.png",
-    thumbnail: "./assets/Gallery_Photo_1.png",
+    original: "./assets/13KYJ_1796-1.jpg",
+    thumbnail: "./assets/13KYJ_1796-1.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_2.png",
-    thumbnail: "./assets/Gallery_Photo_2.png",
+    original: "./assets/14KYJ_2103-1.jpg",
+    thumbnail: "./assets/14KYJ_2103-1.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_3.png",
-    thumbnail: "./assets/Gallery_Photo_3.png",
+    original: "./assets/17KYJ_3286-1.jpg",
+    thumbnail: "./assets/17KYJ_3286-1.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_4.png",
-    thumbnail: "./assets/Gallery_Photo_4.png",
+    original: "./assets/22KYJ_2441-1.jpg",
+    thumbnail: "./assets/22KYJ_2441-1.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_5.png",
-    thumbnail: "./assets/Gallery_Photo_5.png",
+    original: "./assets/KYJ_0022.jpg",
+    thumbnail: "./assets/KYJ_0022.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_6.png",
-    thumbnail: "./assets/Gallery_Photo_6.png",
+    original: "./assets/KYJ_0663.jpg",
+    thumbnail: "./assets/KYJ_0663.jpg",
+  },
+  {
+    original: "./assets/KYJ_0795.jpg",
+    thumbnail: "./assets/KYJ_0795.jpg",
+  },
+  {
+    original: "./assets/KYJ_2626.jpg",
+    thumbnail: "./assets/KYJ_2626.jpg",
+  },
+  {
+    original: "./assets/KYJ_3254.jpg",
+    thumbnail: "./assets/KYJ_3254.jpg",
   },
 ];
 
@@ -47,7 +61,7 @@ export default function Gallery() {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>우리의 아름다운 순간</Title>
+        <Title>사진 구경하기</Title>
       </Divider>
       <ImageGallery
         showPlayButton={false}

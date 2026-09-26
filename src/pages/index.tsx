@@ -1,26 +1,21 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import { Noto_Sans_KR } from "next/font/google";
 import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
 import JsonData from "@/data.json";
 import Script from "next/script";
 
 const Title = dynamic(() => import("@/components/Title"), { ssr: false });
-const Gretting = dynamic(() => import("@/components/Gretting"), { ssr: false });
+const Greeting = dynamic(() => import("@/components/Greeting"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 const Location = dynamic(() => import("@/components/Location"), { ssr: false });
+const MusicToggle = dynamic(() => import("@/components/MusicToggle"), {
+  ssr: false,
+});
 const CongratulatoryMoney = dynamic(
   () => import("@/components/CongratulatoryMoney"),
   { ssr: false }
 );
 const Share = dynamic(() => import("@/components/Share"), { ssr: false });
-
-const notoSansKR = Noto_Sans_KR({
-  weight: ["400", "700"],
-  subsets: [],
-  style: "normal",
-});
 
 const Footer = styled("footer", {
   background: "#D7CCC8",
@@ -44,33 +39,40 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta content="○○○❤○○○ 결혼식에 초대합니다" name="Title" />
+        <meta content="김희웅❤배연정 결혼식에 초대합니다!" name="Title" />
         <meta
-          content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분"
+          content="2026년 12월 19일 토요일 오후 6시 40분"
           name="Description"
         />
-        <meta content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분" name="Keyword" />
-        <meta property="og:title" content="○○○❤○○○ 결혼식에 초대합니다" />
+        <meta content="2026년 12월 19일 토요일 오후 6시 40분" name="Keyword" />
+        <meta property="og:title" content="김희웅❤배연정 결혼식에 초대합니다" />
         <meta
           property="og:description"
-          content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분"
+          content="2026년 12월 19일 토요일 오후 6시 40분"
         />
-        <meta
-          property="og:url"
-          content="https://kyuhyuk.kr/wedding-invitation"
-        />
+        {/*<meta*/}
+        {/*  property="og:url"*/}
+        {/*  content="https://kyuhyuk.kr/wedding-invitation"*/}
+        {/*/>*/}
         <meta name="theme-color" content="#BCAAA4" />
-        <title>○○○❤○○○ 결혼식에 초대합니다</title>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <title>김희웅❤배연정 결혼식에 초대합니다</title>
       </Head>
-      <main className={`${notoSansKR.className}`}>
+      <main>
+        <MusicToggle />
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
+        <Script
+            src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_MAP_KEY}&autoload=false`}
+            strategy="beforeInteractive"
+        />
+
         <Title data={JsonData} />
-        <Gretting data={JsonData} />
-        <Gallery />
+        <Greeting data={JsonData} />
         <Location />
+        <Gallery />
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
-        <Footer>Copyright © 2021 KyuHyuk Lee</Footer>
+        <Footer>Copyright © 2026 yeonjungbae</Footer>
       </main>
     </>
   );

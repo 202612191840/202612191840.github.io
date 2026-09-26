@@ -1,37 +1,37 @@
 {
-  "date": "1970년 01월 01일, 목요일 오전 12시 00분",
-  "location": "○○○웨딩, ○층 ○○홀",
-  "gretting": "서로 마주 보며 다져온 사랑을\n이제 함께 한곳을 바라보며 걸어갈 수 있는\n큰 사랑으로 키우고자 합니다.\n저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게\n앞날을 축복해 주시면 감사하겠습니다.",
+  "date": "2026.12.19 SAT 6:40PM",
+  "location": "더베뉴지 서울, 2층 베뉴지홀",
+  "greeting": "\n\n어쩌다 보니 맨날 만나고\n결국 결혼까지 하게 됐습니다.\n\n추운 겨울, 따듯한 마음으로 오셔서\n저희의 인생 2막을 함께 열어주세요.",
   "groom": {
-    "name": "○○○",
+    "name": "김희웅",
     "account_number": "○○은행 ***-***-******",
     "parents": {
       "mother": {
-        "name": "○○○",
+        "name": "안언연",
         "account_number": "○○은행 ***-***-******"
       },
       "father": {
-        "name": "○○○",
+        "name": "김덕중",
         "account_number": "○○은행 ***-***-******"
       }
     }
   },
   "bride": {
-    "name": "○○○",
-    "account_number": "○○은행 ***-***-******",
+    "name": "배연정",
+    "account_number": "신한은행 110-463-386060",
     "parents": {
       "mother": {
-        "name": "○○○",
-        "account_number": "○○은행 ***-***-******"
+        "name": "안갑열",
+        "account_number": "국민은행 279602-04-006943"
       },
       "father": {
-        "name": "○○○",
-        "account_number": "○○은행 ***-***-******"
+        "name": "배기열",
+        "account_number": "국민은행 279602-04-067836"
       }
     }
   },
   "kakaotalk": {
-    "api_token": "",
+    "api_token": "ae49c35eb759b29000bc873e58daca85",
     "wedding_invitation_url": "",
     "share_image": ""
   }

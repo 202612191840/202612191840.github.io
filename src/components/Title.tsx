@@ -1,5 +1,4 @@
 import { styled } from "@stitches/react";
-import { Divider } from "antd";
 
 const Layout = styled("div", {
   width: "100%",
@@ -23,8 +22,8 @@ const TitleWrapper = styled("div", {
   "-o-animation": "fadein 3s" /* Opera */,
 });
 
-const VideoBackground = styled("video", {
-  backgroundColor: "#aeb8b3 !important",
+const ImageBackground = styled("img", {
+  display: "block",
   opacity: 0.9,
   objectFit: "cover",
   objectPosition: "center center",
@@ -34,20 +33,24 @@ const VideoBackground = styled("video", {
 });
 
 const WeddingInvitation = styled("p", {
+  fontFamily: '"MaruBuri", serif',
   fontSize: "1.5vh",
+  fontWeight: 300,
   opacity: 0.45,
   marginBottom: 16,
 });
 
 const GroomBride = styled("p", {
+  fontFamily: '"MaruBuri", serif',
   fontSize: "3.5vh",
-  fontWeight: "bold",
+  fontWeight: 600,
   opacity: 0.9,
   marginBottom: 16,
 });
 
 const Schedule = styled("p", {
   fontSize: "2vh",
+  fontWeight: 300,
   opacity: 0.65,
   marginBottom: 24,
 });
@@ -59,9 +62,11 @@ type TitleProps = {
 export default function Title({ data }: TitleProps) {
   return (
     <Layout>
-      <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src="./assets/BackgroundVideo.mp4" type="video/mp4" />
-      </VideoBackground>
+      <ImageBackground
+        src="/assets/KYJ_0663.jpg"
+        alt=""
+        aria-hidden="true"
+      />
       <TitleWrapper>
         <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
         <GroomBride>

@@ -8,14 +8,16 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
-  fontWeight: "bold",
-  opacity: 0.85,
+  fontFamily: '"MaruBuri", serif',
+  color: "#795548",
+  fontSize: "clamp(18px, 2.2vh, 22px)",
+  fontWeight: 600,
+  opacity: 0.95,
   marginBottom: 0,
 });
 
 const Content = styled("div", {
-  fontSize: "1.75vh",
+  fontSize: "clamp(16px, 2vh, 19px)",
   lineHeight: 1.75,
   opacity: 0.75,
   marginBottom: 16,
@@ -24,7 +26,8 @@ const Content = styled("div", {
 });
 
 const GroomBride = styled("p", {
-  fontSize: "1.75vh",
+  fontSize: "clamp(15px, 2vh, 20px)",
+  fontWeight: 600,
   lineHeight: 1.75,
   opacity: 0.85,
   marginBottom: 0,
@@ -32,18 +35,15 @@ const GroomBride = styled("p", {
   textAlign: "center",
 });
 
-type GrettingProps = {
+type GreetingProps = {
   data?: Data;
 };
 
-export default function Gretting({ data }: GrettingProps) {
+export default function Greeting({ data }: GreetingProps) {
   return (
     <Wrapper>
-      <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
-        <Title>결혼합니다</Title>
-      </Divider>
       <Content>
-        {data?.gretting?.split("\n")?.map((value, index) => {
+        {data?.greeting?.split("\n")?.map((value, index) => {
           return (
             <div key={index}>
               {value}
@@ -53,11 +53,15 @@ export default function Gretting({ data }: GrettingProps) {
         })}
       </Content>
       <GroomBride>
+        <b>
         {data?.groom?.parents?.father?.name} ·{" "}
-        {data?.groom?.parents?.mother?.name}의 장남 {data?.groom?.name}
+          {data?.groom?.parents?.mother?.name}</b>의 장남 <b>{data?.groom?.name}</b>
         <br />
+        <b>
         {data?.bride?.parents?.father?.name} ·{" "}
-        {data?.bride?.parents?.mother?.name}의 장녀 {data?.bride?.name}
+        {data?.bride?.parents?.mother?.name}</b>의 장녀 <b>{data?.bride?.name}</b>
+        <br />
+        <br />
       </GroomBride>
     </Wrapper>
   );

@@ -19,9 +19,11 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
+  fontFamily: '"MaruBuri", serif',
+  color: "#795548",
   fontSize: "2vh",
-  fontWeight: "bold",
-  opacity: 0.85,
+  fontWeight: 600,
+  opacity: 0.95,
   marginBottom: 0,
 });
 
@@ -74,7 +76,8 @@ export default function Share({ data }: ShareProps) {
           description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
           imageUrl: data?.kakaotalk?.share_image,
           link: {
-            mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
+            mobileWebUrl: data?.kakaotalk?.wedding_invitation_url
+            ,
             webUrl: data?.kakaotalk?.wedding_invitation_url,
           },
         },

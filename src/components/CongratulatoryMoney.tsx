@@ -13,9 +13,11 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
+  fontFamily: '"MaruBuri", serif',
+  color: "#795548",
   fontSize: "2vh",
-  fontWeight: "bold",
-  opacity: 0.85,
+  fontWeight: 600,
+  opacity: 0.95,
   marginBottom: 0,
 });
 
@@ -27,7 +29,8 @@ const Content = styled("p", {
 });
 
 const SubContent = styled("p", {
-  fontSize: "1.3vh",
+  fontSize: "2vh",
+  fontWeight: 300,
   lineHeight: 1.75,
   opacity: 0.75,
   marginBottom: 24,
@@ -35,6 +38,7 @@ const SubContent = styled("p", {
 
 const Description = styled("p", {
   fontSize: "1.3vh",
+  fontWeight: 300,
   lineHeight: 1.75,
   opacity: 0.65,
   marginTop: 8,
@@ -61,24 +65,15 @@ export default function CongratulatoryMoney({
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>축하의 마음을 전하세요</Title>
+        <Title>마음 전하실 곳</Title>
       </Divider>
-      <Content>축하의 마음을 담아 축의금을 전달해 보세요.</Content>
+      <Content></Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
-        <CheckCircleTwoTone
-          style={{ fontSize: 64, marginBottom: 16 }}
-          twoToneColor="#829fe0"
-        />
-        <br />
-        <SubContent>신랑측 계좌번호 확인</SubContent>
+        <SubContent>🤵🏻‍♂️신랑측 계좌번호</SubContent>
       </ContactButton>
+      /
       <ContactButton onClick={() => setBrideVisible(true)}>
-        <CheckCircleTwoTone
-          style={{ fontSize: 64, marginBottom: 16 }}
-          twoToneColor="#fe7daf"
-        />
-        <br />
-        <SubContent>신부측 계좌번호 확인</SubContent>
+        <SubContent>👰🏻‍♀️신부측 계좌번호</SubContent>
       </ContactButton>
       <Modal
         title={<b>신랑측 계좌번호</b>}
@@ -91,7 +86,7 @@ export default function CongratulatoryMoney({
       >
         {data?.groom?.parents?.father && (
           <div>
-            <b>부) {data?.groom?.parents?.father?.name}</b>
+            <b>(부) {data?.groom?.parents?.father?.name}</b>
             <Divider type="vertical" />
             <CopyToClipboard
               text={data?.groom?.parents?.father?.account_number}
@@ -108,7 +103,7 @@ export default function CongratulatoryMoney({
         )}
         {data?.groom?.parents?.mother && (
           <div style={{ marginTop: 24, marginBottom: 24 }}>
-            <b>모) {data?.groom?.parents?.mother.name}</b>
+            <b>(모) {data?.groom?.parents?.mother.name}</b>
             <Divider type="vertical" />
             <CopyToClipboard text={data?.groom?.parents?.mother.account_number}>
               <Button
@@ -153,7 +148,7 @@ export default function CongratulatoryMoney({
       >
         {data?.bride?.parents?.father && (
           <div>
-            <b>부) {data?.bride?.parents?.father?.name}</b>
+            <b>(부) {data?.bride?.parents?.father?.name}</b>
             <Divider type="vertical" />
             <CopyToClipboard
               text={data?.bride?.parents?.father?.account_number}
@@ -170,7 +165,7 @@ export default function CongratulatoryMoney({
         )}
         {data?.bride?.parents?.mother && (
           <div style={{ marginTop: 24, marginBottom: 24 }}>
-            <b>모) {data?.bride?.parents?.mother?.name}</b>
+            <b>(모) {data?.bride?.parents?.mother?.name}</b>
             <Divider type="vertical" />
             <CopyToClipboard
               text={data?.bride?.parents?.mother?.account_number}
