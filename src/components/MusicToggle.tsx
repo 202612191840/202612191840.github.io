@@ -5,10 +5,10 @@ const MusicButton = styled("button", {
   position: "static",
   border: "1px solid rgba(255, 255, 255, 0.7)",
   borderRadius: 999,
-  padding: "10px 14px",
+  padding: "7px 10px",
   background: "rgba(75, 61, 55, 0.78)",
   color: "white",
-  fontSize: 14,
+  fontSize: 12,
   cursor: "pointer",
   boxShadow: "0 2px 8px rgba(0, 0, 0, 0.18)",
 });
