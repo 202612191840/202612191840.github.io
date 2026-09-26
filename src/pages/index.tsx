@@ -2,7 +2,6 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
 import JsonData from "@/data.json";
-import Script from "next/script";
 
 const Title = dynamic(() => import("@/components/Title"), { ssr: false });
 const Greeting = dynamic(() => import("@/components/Greeting"), { ssr: false });
@@ -15,7 +14,6 @@ const CongratulatoryMoney = dynamic(
   () => import("@/components/CongratulatoryMoney"),
   { ssr: false }
 );
-const Share = dynamic(() => import("@/components/Share"), { ssr: false });
 
 const Footer = styled("footer", {
   background: "#D7CCC8",
@@ -56,14 +54,12 @@ export default function Home() {
       </Head>
       <main>
         <MusicToggle />
-        <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
 
         <Title data={JsonData} />
         <Greeting data={JsonData} />
         <Location />
         <Gallery />
         <CongratulatoryMoney data={JsonData} />
-        <Share data={JsonData} />
         <Footer>Copyright © 2026 yeonjungbae</Footer>
       </main>
     </>

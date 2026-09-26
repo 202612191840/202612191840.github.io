@@ -30,9 +30,4 @@ type Data = {
       };
     };
   };
-  kakaotalk: {
-    api_token: string;
-    wedding_invitation_url: string;
-    share_image: string;
-  };
 };
