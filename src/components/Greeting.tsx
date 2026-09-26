@@ -27,7 +27,7 @@ const Content = styled("div", {
 
 const GroomBride = styled("p", {
   fontSize: "clamp(15px, 2vh, 20px)",
-  fontWeight: 600,
+  fontWeight: 400,
   lineHeight: 1.75,
   opacity: 0.85,
   marginBottom: 0,
