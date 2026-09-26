@@ -66,6 +66,9 @@ export default function Title({ data }: TitleProps) {
         src="/assets/KYJ_0663.jpg"
         alt=""
         aria-hidden="true"
+        draggable={false}
+        onContextMenu={(event) => event.preventDefault()}
+        onDragStart={(event) => event.preventDefault()}
       />
       <TitleWrapper>
         <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>

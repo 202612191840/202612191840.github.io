@@ -59,7 +59,14 @@ const images = [
 
 export default function Gallery() {
   return (
-    <Wrapper>
+    <Wrapper
+      onContextMenuCapture={(event) => {
+        if (event.target instanceof HTMLImageElement) event.preventDefault();
+      }}
+      onDragStartCapture={(event) => {
+        if (event.target instanceof HTMLImageElement) event.preventDefault();
+      }}
+    >
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>사진 구경하기</Title>
       </Divider>

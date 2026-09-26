@@ -50,10 +50,6 @@ export default function Home() {
           property="og:description"
           content="2026년 12월 19일 토요일 오후 6시 40분"
         />
-        {/*<meta*/}
-        {/*  property="og:url"*/}
-        {/*  content="https://kyuhyuk.kr/wedding-invitation"*/}
-        {/*/>*/}
         <meta name="theme-color" content="#BCAAA4" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <title>김희웅❤배연정 결혼식에 초대합니다</title>
@@ -61,10 +57,6 @@ export default function Home() {
       <main>
         <MusicToggle />
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
-        <Script
-            src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_MAP_KEY}&autoload=false`}
-            strategy="beforeInteractive"
-        />
 
         <Title data={JsonData} />
         <Greeting data={JsonData} />
