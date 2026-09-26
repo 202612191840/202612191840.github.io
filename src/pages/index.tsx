@@ -1,6 +1,7 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
+import { useState } from "react";
 import JsonData from "@/data.json";
 
 const Title = dynamic(() => import("@/components/Title"), { ssr: false });
@@ -14,6 +15,7 @@ const CongratulatoryMoney = dynamic(
   () => import("@/components/CongratulatoryMoney"),
   { ssr: false }
 );
+const ArticleView = dynamic(() => import("@/components/ArticleView"), { ssr: false });
 
 const Footer = styled("footer", {
   background: "#D7CCC8",
@@ -31,6 +33,7 @@ const Footer = styled("footer", {
 });
 
 export default function Home() {
+  const [showArticle, setShowArticle] = useState(false);
   return (
     <>
       <Head>
@@ -53,14 +56,21 @@ export default function Home() {
         <title>김희웅❤배연정 결혼식에 초대합니다</title>
       </Head>
       <main>
-        <MusicToggle />
+        <div className="floating-controls">
+          <button className="article-toggle" type="button" aria-pressed={showArticle} onClick={() => setShowArticle((visible) => !visible)}>
+            {showArticle ? "청첩장" : "기사버전"}
+          </button>
+          <MusicToggle />
+        </div>
 
+        {showArticle ? <ArticleView data={JsonData} /> : <>
         <Title data={JsonData} />
         <Greeting data={JsonData} />
         <Location />
         <Gallery />
         <CongratulatoryMoney data={JsonData} />
         <Footer>Copyright © 2026 yeonjungbae</Footer>
+        </>}
       </main>
     </>
   );

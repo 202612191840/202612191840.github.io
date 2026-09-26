@@ -2,10 +2,7 @@ import { styled } from "@stitches/react";
 import { useRef, useState } from "react";
 
 const MusicButton = styled("button", {
-  position: "fixed",
-  top: 16,
-  right: 16,
-  zIndex: 1000,
+  position: "static",
   border: "1px solid rgba(255, 255, 255, 0.7)",
   borderRadius: 999,
   padding: "10px 14px",
