@@ -62,6 +62,7 @@ img {
   -webkit-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
+  touch-action: pan-y;
 }
 
 @keyframes fadein {

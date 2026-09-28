@@ -44,7 +44,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://202612191840.github.io/" />
         <meta property="og:title" content="김희웅 💖 배연정 결혼식에 초대합니다!" />
-        <meta property="og:description" content="2026.12.19(토) 18:40 더베뉴지 2층 베뉴지홀" />
+        <meta property="og:description" content="2026.12.19(토) 18:40 더베뉴지 베뉴지홀" />
         <meta property="og:image" content="https://202612191840.github.io/assets/optimized/KYJ_2588.jpg" />
         <meta property="og:image:secure_url" content="https://202612191840.github.io/assets/optimized/KYJ_2588.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
@@ -53,7 +53,7 @@ export default function Home() {
         <meta property="og:image:alt" content="김희웅과 배연정의 웨딩 사진" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="김희웅 ♥ 배연정 결혼식에 초대합니다!" />
-        <meta name="twitter:description" content="2026.12.19(토) 18:40 더베뉴지 2층 베뉴지홀" />
+        <meta name="twitter:description" content="2026.12.19(토) 18:40 더베뉴지 베뉴지홀" />
         <meta name="twitter:image" content="https://202612191840.github.io/assets/optimized/KYJ_2588.jpg" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <title>김희웅 ❤ 배연정 결혼식에 초대합니다</title>
