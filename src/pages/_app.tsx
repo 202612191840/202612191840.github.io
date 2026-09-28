@@ -5,7 +5,13 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div
       onContextMenuCapture={(event) => {
-        if (event.target instanceof HTMLImageElement) event.preventDefault();
+        const target = event.target;
+        if (
+          target instanceof Element &&
+          (target instanceof HTMLImageElement || target.closest("img"))
+        ) {
+          event.preventDefault();
+        }
       }}
     >
       <Component {...pageProps} />

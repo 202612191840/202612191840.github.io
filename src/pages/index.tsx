@@ -38,7 +38,10 @@ export default function Home() {
     <>
             <Head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <meta name="theme-color" content="#BCAAA4" />
         <meta name="description" content="김희웅과 배연정의 결혼식에 초대합니다. 2026년 12월 19일, 두 사람의 새로운 시작을 함께 축복해 주세요." />
         <meta property="og:type" content="website" />
