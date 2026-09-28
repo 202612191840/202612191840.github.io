@@ -15,7 +15,7 @@ const TitleWrapper = styled("div", {
   left: "50%",
   transform: "translate(-50%, -50%)",
   textAlign: "center",
-  textShadow: "-1px 0 #9e9e9e, 0 1px #9e9e9e, 1px 0 #9e9e9e, 0 -1px #9e9e9e",
+  textShadow: "0 0 2px rgba(255, 255, 255, 0.95), 0 1px 5px rgba(255, 255, 255, 0.8), 0 2px 5px rgba(0, 0, 0, 0.55)",
   animation: "fadein 3s",
   "-moz-animation": "fadein 3s" /* Firefox */,
   "-webkit-animation": "fadein 3s" /* Safari and Chrome */,
@@ -36,7 +36,7 @@ const WeddingInvitation = styled("p", {
   fontFamily: '"MaruBuri", serif',
   fontSize: "1.5vh",
   fontWeight: 300,
-  opacity: 0.45,
+  opacity: 0.9,
   marginBottom: 16,
 });
 
@@ -51,7 +51,7 @@ const GroomBride = styled("p", {
 const Schedule = styled("p", {
   fontSize: "2vh",
   fontWeight: 300,
-  opacity: 0.65,
+  opacity: 0.9,
   marginBottom: 24,
 });
 
