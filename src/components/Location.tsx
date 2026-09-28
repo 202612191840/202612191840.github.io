@@ -74,8 +74,8 @@ const GuideText = styled("p", {
 
 const travelGuides = [
   { title: "주소", text: "서울특별시 강서구 강서로 388\n더베뉴지 2층, 베뉴지홀" },
-  { title: "버스", text: "지선 6630, 6632, 6642, 6645, 6648\n간선 601, 605, 652, 654, 661\n일반 60-88 / 직행 3000" },
   { title: "지하철", text: "5호선 발산역 3번 출구 도보 1분\n9호선 양천향교역 6번 출구 도보 10분" },
+  { title: "버스", text: "지선 6630, 6632, 6642, 6645, 6648\n간선 601, 605, 652, 654, 661\n일반 60-88 / 직행 3000" },
   { title: "주차", text: "웨딩홀 주차장 2시간 무료\n(추가 10분 1000원)" },
 ];
 
@@ -122,7 +122,7 @@ export default function Location() {
         );
         const map = new window.kakao.maps.Map(container, {
           center: position,
-          level: 3,
+          level: 4,
         });
         new window.kakao.maps.Marker({ map, position });
       });
