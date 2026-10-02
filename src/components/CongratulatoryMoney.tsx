@@ -1,4 +1,4 @@
-import { CheckCircleTwoTone } from "@ant-design/icons";
+﻿import { CheckCircleTwoTone } from "@ant-design/icons";
 import { styled } from "@stitches/react";
 import { Button, Divider, Modal, message } from "antd";
 import { useState } from "react";
@@ -28,14 +28,6 @@ const Content = styled("p", {
   marginBottom: 24,
 });
 
-const SubContent = styled("p", {
-  fontSize: "2vh",
-  fontWeight: 300,
-  lineHeight: 1.75,
-  opacity: 0.75,
-  marginBottom: 24,
-});
-
 const Description = styled("p", {
   fontSize: "1.3vh",
   fontWeight: 300,
@@ -44,12 +36,36 @@ const Description = styled("p", {
   marginTop: 8,
 });
 
-const ContactButton = styled("div", {
-  display: "inline-block",
+const ContactButton = styled("button", {
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
   textAlign: "center",
-  marginLeft: 24,
-  marginRight: 24,
+  marginLeft: 8,
+  marginRight: 8,
   marginBottom: 24,
+  padding: "10px 16px",
+  border: "1px solid rgba(121, 85, 72, 0.25)",
+  borderRadius: 999,
+  background: "rgba(255, 255, 255, 0.72)",
+  boxShadow: "0 3px 10px rgba(75, 55, 45, 0.12)",
+  color: "#795548",
+  cursor: "pointer",
+  transition: "transform 160ms ease, box-shadow 160ms ease",
+  "&:hover": {
+    transform: "translateY(-1px)",
+    boxShadow: "0 5px 14px rgba(75, 55, 45, 0.18)",
+  },
+  "&:focus-visible": {
+    outline: "2px solid #795548",
+    outlineOffset: 3,
+  },
+});
+
+const ContactLabel = styled("span", {
+  fontSize: "1.7vh",
+  fontWeight: 700,
+  lineHeight: 1.4,
 });
 
 type CongratulatoryMoneyProps = {
@@ -68,12 +84,18 @@ export default function CongratulatoryMoney({
         <Title>마음 전하실 곳</Title>
       </Divider>
       <Content></Content>
-      <ContactButton onClick={() => setGroomVisible(true)}>
-        <SubContent>🤵🏻‍♂️신랑측 계좌번호</SubContent>
+      <ContactButton
+        type="button"
+        onClick={() => setGroomVisible(true)}
+      >
+        <ContactLabel>🤵🏻‍♂️신랑측 계좌번호 보기</ContactLabel>
       </ContactButton>
       /
-      <ContactButton onClick={() => setBrideVisible(true)}>
-        <SubContent>👰🏻‍♀️신부측 계좌번호</SubContent>
+      <ContactButton
+        type="button"
+        onClick={() => setBrideVisible(true)}
+      >
+        <ContactLabel>👰🏻‍♀️신부측 계좌번호 보기</ContactLabel>
       </ContactButton>
       <Modal
         title={<b>신랑측 계좌번호</b>}
@@ -132,9 +154,7 @@ export default function CongratulatoryMoney({
           </div>
         )}
         <div>
-          <Description>
-            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
-          </Description>
+          <Description>계좌번호를 누르면 복사돼요.</Description>
         </div>
       </Modal>
       <Modal
@@ -196,11 +216,10 @@ export default function CongratulatoryMoney({
           </div>
         )}
         <div>
-          <Description>
-            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
-          </Description>
+          <Description>계좌번호를 누르면 복사돼요.</Description>
         </div>
       </Modal>
     </Wrapper>
   );
 }
+
