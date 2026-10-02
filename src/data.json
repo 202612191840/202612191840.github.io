@@ -4,15 +4,15 @@
   "greeting": "\n\n어쩌다 보니 맨날 만나고\n결국 결혼까지 하게 됐습니다.\n\n추운 겨울, 따듯한 마음으로 오셔서\n저희의 인생 2막을 함께 열어주세요.",
   "groom": {
     "name": "김희웅",
-    "account_number": "○○은행 ***-***-******",
+    "account_number": "국민은행 269902-04-106592",
     "parents": {
       "mother": {
         "name": "안언연",
-        "account_number": "○○은행 ***-***-******"
+        "account_number": "국민은행 269902-04-033009"
       },
       "father": {
         "name": "김덕중",
-        "account_number": "○○은행 ***-***-******"
+        "account_number": "국민은행 208401-04-078972"
       }
     }
   },
