@@ -52,10 +52,6 @@ const images = [
     thumbnail: "/assets/optimized/KYJ_0600.jpg",
   },
   {
-    original: "/assets/optimized/KYJ_1696.jpg",
-    thumbnail: "/assets/optimized/KYJ_1696.jpg",
-  },
-  {
     original: "/assets/optimized/KYJ_1758.jpg",
     thumbnail: "/assets/optimized/KYJ_1758.jpg",
   },

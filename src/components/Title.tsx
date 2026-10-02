@@ -63,7 +63,7 @@ export default function Title({ data }: TitleProps) {
   return (
     <Layout>
       <ImageBackground
-        src="/assets/optimized/KYJ_0663.jpg"
+        src="/assets/optimized/KYJ_0663_edited.png"
         alt=""
         aria-hidden="true"
         draggable={false}
